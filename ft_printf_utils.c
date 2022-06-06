@@ -23,17 +23,11 @@ int	ft_print_string(char *str)
 
 	c = 0;
 	if (str == NULL)
+		return (write(1, "(null)", 6));
+	while (str[c])
 	{
-		write(1, "(null)", 6);
-		c = 6;
-	}
-	else
-	{
-		while (str[c])
-		{
-			write(1, &str[c], 1);
-			c++;
-		}
+		write(1, &str[c], 1);
+		c++;
 	}
 	return (c);
 }

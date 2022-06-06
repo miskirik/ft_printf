@@ -32,6 +32,8 @@ int	ft_select(va_list args, const char select)
 		count += ft_hex(va_arg(args, unsigned), "0123456789ABCDEF", 0, 16);
 	else if (select == '%')
 		count += write(1, "%", 1);
+	else
+		count += write(1, &select, 1);
 	return (count);
 }
 
@@ -57,4 +59,9 @@ int	ft_printf(const char *str, ...)
 	}
 	va_end(args);
 	return (print_count);
+}
+int	main()
+{
+	printf("normal printf:%p\n",0);
+	ft_printf("benim printf:%p",0);
 }

@@ -46,8 +46,7 @@ int	ft_print_number(int n)
 	{
 		c += ft_print_char('-');
 		n = -n;
-	}
-	
+	}	
 	if (n >= 0 && n <= 9)
 		c += ft_print_char(n + '0');
 	if (n > 9)
@@ -58,7 +57,7 @@ int	ft_print_number(int n)
 	return (c);
 }
 
-int ft_print_unumber(unsigned int n)
+int	ft_print_unumber(unsigned int n)
 {
 	int	c;
 
@@ -73,15 +72,15 @@ int ft_print_unumber(unsigned int n)
 	return (c);
 }
 
-int	ft_hex (unsigned long p, char *base, int check, int base_len)
+int	ft_hex(unsigned long p, char *base, int check, int base_len)
 {
 	int	c;
 
 	c = 0;
 	if (check == 1 && p != 0)
 		c += write(1, "0x", 2);
-	if(check == 1 && p == 0)
-		return(write(1,"(nil)",5));
+	if (check == 1 && p == 0)
+		return (write(1, "(nil)", 5));
 	if (p / base_len != 0)
 		c += ft_hex(p / base_len, base, 0, base_len);
 	c += write(1, &base[p % base_len], 1);

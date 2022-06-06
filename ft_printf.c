@@ -6,7 +6,7 @@
 /*   By: miskirik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/22 05:54:52 by miskirik          #+#    #+#             */
-/*   Updated: 2022/04/22 05:55:00 by miskirik         ###   ########.fr       */
+/*   Updated: 2022/06/07 02:35:18 by miskirik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_printf.h"
@@ -59,9 +59,4 @@ int	ft_printf(const char *str, ...)
 	}
 	va_end(args);
 	return (print_count);
-}
-int	main()
-{
-	printf("normal printf:%p\n",0);
-	ft_printf("benim printf:%p",0);
 }

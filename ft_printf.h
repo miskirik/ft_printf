@@ -6,7 +6,7 @@
 /*   By: miskirik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/22 05:55:36 by miskirik          #+#    #+#             */
-/*   Updated: 2022/04/22 05:55:38 by miskirik         ###   ########.fr       */
+/*   Updated: 2022/06/07 03:08:07 by miskirik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <stdarg.h>
 # include <unistd.h>
-# include <stdio.h>
 
 int	ft_printf(const char *format, ...);
 int	ft_select(va_list args, const char select);
